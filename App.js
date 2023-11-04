@@ -2,13 +2,13 @@ import React from 'react';
 
 
 const Button = (props) => {
-    return <button>{props.symbol}</button>
+    return <button class="slide-btn">{props.symbol}</button>
 }
 
 const Slide = () => {
     return (
         <>
-            <div>Slide</div>
+            <div id="slide-div">Slide</div>
         </>
     )
 }
