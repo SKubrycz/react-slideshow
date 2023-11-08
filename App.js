@@ -1,8 +1,7 @@
 import React from 'react';
 
-
 const Button = (props) => {
-    return <button class="slide-btn">{props.symbol}</button>
+    return <button className="slide-btn">{props.symbol}</button>
 }
 
 const Slide = () => {
