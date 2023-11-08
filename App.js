@@ -7,7 +7,11 @@ const Button = (props) => {
 const Slide = () => {
     return (
         <>
-            <div id="slide-div">Slide</div>
+            <div id="slide-div">
+                <Button symbol={'<'}/>
+                <Button symbol={'>'}/>
+                <img src="slide1.png" alt="slide1" className="img-class"/>
+            </div>
         </>
     )
 }
@@ -17,9 +21,7 @@ const App = () => {
         <>
             <header>Slideshow</header>
             <article id='slideshow'>
-                <Button symbol={'<'}/>
                 <Slide/>
-                <Button symbol={'>'}/>
             </article>
         </>
     )
