@@ -15,7 +15,6 @@ header {
 
 button {
   padding: 15px 10px;
-  background-color: #0f1f66;
   color: white;
   cursor: pointer;
   font-size: 20px;
@@ -48,6 +47,12 @@ button {
   position: absolute;
   top: 50%;
   margin-top: -22px;
+  background-color: rgba(15, 31, 102, 0.8);
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(15, 31, 102, 1.0); 
 }
 
 .prev {
