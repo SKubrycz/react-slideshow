@@ -1,4 +1,4 @@
-# react-slideshow
+# React-slideshow
 Slideshow made in ReactJS for learning purposes
 
 Basically whenever I learn a new React concept or have an idea how to solve a problem for creating the slideshow I'll write code here
