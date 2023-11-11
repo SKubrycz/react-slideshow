@@ -6,11 +6,16 @@ const Button = (props) => {
 }
 
 const Slide = () => {
+    const [count, setCount] = useState(0);
+    const reduceCount = () => setCount(count - 1);
+    const increaseCount = () => setCount(count + 1);
+
     return (
         <>
             <img src="slide1.png" alt="slide1" className="img-class"/>
-            <Button name={'prev'} symbol={'<'}/>
-            <Button name={'next'} symbol={'>'}/>
+            <Button name={'prev'} symbol={'<'} onClick={() => reduceCount}/>
+            <Button name={'next'} symbol={'>'} onClick={() => increaseCount}/>
+            <p>Count: {count}</p>
         </>
     )
 }
