@@ -7,8 +7,8 @@ const Button = (props) => {
 
 const Slide = () => {
     const [count, setCount] = useState(0);
-    const reduceCount = () => setCount(count - 1);
-    const increaseCount = () => setCount(count + 1);
+    const reduceCount = () => setCount(count => count - 1);
+    const increaseCount = () => setCount(count => count + 1);
 
     return (
         <>
@@ -21,11 +21,18 @@ const Slide = () => {
 }
 
 const App = () => {
+    const [count, setCount] = useState(0);
+    const reduceCount = () => setCount(count => count - 1);
+    const increaseCount = () => setCount(count => count + 1);
+
     return (
         <>
             <header>Slideshow</header>
             <article id='slideshow'>
                 <Slide/>
+                <button onClick={() => reduceCount}>decrease</button>
+                <button onClick={() => increaseCount}>increase</button>
+                <p>count {count}</p>
             </article>
         </>
     )
