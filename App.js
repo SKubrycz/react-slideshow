@@ -8,13 +8,13 @@ import { useEffect } from 'react';
 } */
 
 const Slide = () => {
-    const [counter, setCounter] = useState(0);
-    const reduceCounter = () => setCounter(counter => counter - 1);
-    const increaseCounter = () => setCounter(counter => counter + 1);
+    const [counter, setCounter] = useState(1);
+    const reduceCounter = () => setCounter(c => Math.max(c - 1, 1));
+    const increaseCounter = () => setCounter(c => Math.min(c + 1, 5));
 
     return (
         <>
-            <img src="slide1.png" alt="slide1" className="img-class"/>
+            <img src={`slide${counter}.png`} alt={`slide${counter}`} className="img-class"/>
             <button className="prev" onClick={reduceCounter}>{'<'}</button>
             <button className="next" onClick={increaseCounter}>{'>'}</button>
             <p>Counter: {counter}</p>
