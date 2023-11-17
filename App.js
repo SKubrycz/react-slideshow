@@ -2,11 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-
-/* const Button = (props) => {
-    return <button className={props.name}>{props.symbol}</button>
-} */
-
 const Slide = () => {
     const [counter, setCounter] = useState(1);
     const reduceCounter = () => setCounter(c => Math.max(c - 1, 1));

@@ -34,8 +34,13 @@ button {
   height: 350px;
   margin: 10px auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 10px;
+}
+
+#slideshow > div {
+  margin: 20px;
 }
 
 #slide-div {
@@ -58,6 +63,7 @@ button {
 
 .prev {
   border-radius: 0px 5px 5px 0px;
+  left: 0;
 }
 
 .next {
@@ -69,4 +75,25 @@ button {
   width: inherit;
   height: inherit;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  button {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+
+  #slideshow {
+    width: 300px;
+    height: 175px;
+  }
+
+  #slideshow > div {
+    font-size: 14px;
+  }
+
+  #slide-div {
+    width: 300px;
+    height: 175px;
+  }
 }
