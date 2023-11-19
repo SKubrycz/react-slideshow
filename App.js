@@ -2,6 +2,17 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+const Navbar = () => {
+
+    return (
+        <>
+            <nav className="navbar">
+            <header>Slideshow</header>
+            </nav>
+        </>
+    )
+}
+
 const Slide = () => {
     const [counter, setCounter] = useState(1);
     const reduceCounter = () => setCounter(c => Math.max(c - 1, 1));
@@ -47,7 +58,7 @@ const App = () => {
 
     return (
         <>
-            <header>Slideshow</header>
+            <Navbar></Navbar>
             <article id='slideshow'>
                 <Slide/>
             </article>
