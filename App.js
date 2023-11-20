@@ -76,7 +76,7 @@ const Footer = () => {
     return (
         <>
             <footer className="footer">
-                Some footer content --> <CurrTime></CurrTime>
+                Some footer content --- <CurrTime></CurrTime>
             </footer>
         </>
     )
