@@ -51,6 +51,37 @@ const Slide = () => {
     )
 }
 
+const CurrTime = () => {
+    const [date,setDate] = useState(new Date());
+    
+    useEffect(() => {
+        const timer = setInterval(()=>setDate(new Date()), 1000 )
+        return function cleanup() {
+            clearInterval(timer)
+        }
+    
+    });
+
+    return (
+        <>
+            Time: {date.toLocaleTimeString()}
+        </>
+    )
+}
+
+const Footer = () => {
+
+    
+
+    return (
+        <>
+            <footer className="footer">
+                Some footer content --- <CurrTime></CurrTime>
+            </footer>
+        </>
+    )
+}
+
 const App = () => {
     useEffect(() => {
         document.title = 'Slideshow';
@@ -62,6 +93,7 @@ const App = () => {
             <article id='slideshow'>
                 <Slide/>
             </article>
+            <Footer></Footer>
         </>
     )
 }
