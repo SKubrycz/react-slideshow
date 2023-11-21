@@ -22,19 +22,19 @@ const Slide = () => {
 
     switch(counter) {
         case 1:
-            text = `slide${counter} desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry.`;
+            text = `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`;
             break;
         case 2:
-            text = `slide${counter} desc: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.`;
+            text = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.`;
             break;
         case 3:
-            text = `slide${counter} desc: Contrary to popular belief, Lorem Ipsum is not simply random text.`;
+            text = `Contrary to popular belief, Lorem Ipsum is not simply random text.`;
             break;
         case 4:
-            text = `slide${counter} desc: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`;
+            text = `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`;
             break;
         case 5:
-            text = `slide${counter} desc: The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`;
+            text = `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`;
             break;
         default:
             text = '';
@@ -46,7 +46,9 @@ const Slide = () => {
             <button className="prev" onClick={reduceCounter}>{'<'}</button>
             <button className="next" onClick={increaseCounter}>{'>'}</button>
             <div>Counter: {`\n${counter}`}</div>
-            <div className="desc">{text}</div>
+            <pre>
+                <div className="desc">{`slide${counter} desc: \n\n`}{text}</div>
+            </pre>
         </>
     )
 }
@@ -64,7 +66,10 @@ const CurrTime = () => {
 
     return (
         <>
-            Time: {date.toLocaleTimeString()}
+            <pre>
+                {'\n'}Time: {date.toLocaleTimeString()}
+                {'\n'}Date: {date.toLocaleDateString()}
+            </pre>
         </>
     )
 }
