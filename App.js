@@ -67,8 +67,8 @@ const CurrTime = () => {
     return (
         <>
             <pre>
-                {'\n'}Time: {date.toLocaleTimeString()}
-                {'\n'}Date: {date.toLocaleDateString()}
+                Time: {date.toLocaleTimeString()}
+                {'\t'}Date: {date.toLocaleDateString()}
             </pre>
         </>
     )
@@ -81,7 +81,7 @@ const Footer = () => {
     return (
         <>
             <footer className="footer">
-                Some footer content --- <CurrTime></CurrTime>
+                Some footer content <CurrTime></CurrTime>
             </footer>
         </>
     )
