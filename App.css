@@ -60,6 +60,12 @@ pre {
   height: 350px;
 }
 
+.img-class {
+  width: inherit;
+  height: inherit;
+  border-radius: 10px;
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -82,10 +88,16 @@ pre {
   right: 0; 
 }
 
-.img-class {
-  width: inherit;
-  height: inherit;
-  border-radius: 10px;
+.dots {
+  display: inline;
+  position: absolute;
+  top: 75%;
+  font-size: 30px;
+  letter-spacing: 0.5em;
+}
+
+.dots > div {
+  display: inline;
 }
 
 .footer {
@@ -96,6 +108,8 @@ pre {
   padding: 30px;
   background-color: #01030c;
   box-shadow: 0px -20px 40px #01030c;
+  font-style: italic;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

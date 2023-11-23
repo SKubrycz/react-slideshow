@@ -45,9 +45,16 @@ const Slide = () => {
             <img src={`slide${counter}.png`} alt={`slide${counter}`} className="img-class"/>
             <button className="prev" onClick={reduceCounter}>{'<'}</button>
             <button className="next" onClick={increaseCounter}>{'>'}</button>
+            <div className="dots">
+                <div>•</div>
+                <div>•</div>
+                <div>•</div>
+                <div>•</div>
+                <div>•</div>
+            </div>
             <div>Counter: {`\n${counter}`}</div>
             <pre>
-                <div className="desc">{`slide${counter} desc: \n\n`}{text}</div>
+                <div className="desc">{`slide no.${counter} desc: \n\n`}{text}</div>
             </pre>
         </>
     )
