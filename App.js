@@ -13,7 +13,7 @@ const Navbar = () => {
     )
 }
 
-const Slide = () => {
+const Slide = ({val}) => {
     const [counter, setCounter] = useState(1);
     const reduceCounter = () => setCounter(c => Math.max(c - 1, 1));
     const increaseCounter = () => setCounter(c => Math.min(c + 1, 5));
@@ -40,17 +40,26 @@ const Slide = () => {
             text = '';
     }
 
+    const dotStyle = {
+    }
+
+    //to be changed
+
+    if (val === counter) {
+        dotStyle.style.color = 'white';
+    }
+
     return (
         <>
             <img src={`slide${counter}.png`} alt={`slide${counter}`} className="img-class"/>
             <button className="prev" onClick={reduceCounter}>{'<'}</button>
             <button className="next" onClick={increaseCounter}>{'>'}</button>
             <div className="dots">
-                <div>•</div>
-                <div>•</div>
-                <div>•</div>
-                <div>•</div>
-                <div>•</div>
+                <div val={1} style={dotStyle}>•</div>
+                <div val={2} style={dotStyle}>•</div>
+                <div val={3} style={dotStyle}>•</div>
+                <div val={4} style={dotStyle}>•</div>
+                <div val={5} style={dotStyle}>•</div>
             </div>
             <div>Counter: {`\n${counter}`}</div>
             <pre>
