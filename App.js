@@ -40,26 +40,31 @@ const Slide = ({val}) => {
             text = '';
     }
 
-    const dotStyle = {
-    }
+    const dots = [
+        { title: '• ', id: 1 },
+        { title: '• ', id: 2 },
+        { title: '• ', id: 3 },
+        { title: '• ', id: 4 },
+        { title: '•', id: 5 }
+      ];
 
-    //to be changed
-
-    if (val === counter) {
-        dotStyle.style.color = 'white';
-    }
-
+    const highlightDot = dots.map(dots =>
+        <div
+            key={dots.id}
+            style={{
+                color: (dots.id === counter) ? 'black' : '#bfd1f1'
+            }}
+        >
+            {dots.title}
+        </div>
+    );
     return (
         <>
             <img src={`slide${counter}.png`} alt={`slide${counter}`} className="img-class"/>
             <button className="prev" onClick={reduceCounter}>{'<'}</button>
             <button className="next" onClick={increaseCounter}>{'>'}</button>
             <div className="dots">
-                <div val={1} style={dotStyle}>•</div>
-                <div val={2} style={dotStyle}>•</div>
-                <div val={3} style={dotStyle}>•</div>
-                <div val={4} style={dotStyle}>•</div>
-                <div val={5} style={dotStyle}>•</div>
+                {highlightDot}
             </div>
             <div>Counter: {`\n${counter}`}</div>
             <pre>
