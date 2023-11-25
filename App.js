@@ -13,7 +13,7 @@ const Navbar = () => {
     )
 }
 
-const Slide = ({val}) => {
+const Slide = () => {
     const [counter, setCounter] = useState(1);
     const reduceCounter = () => setCounter(c => Math.max(c - 1, 1));
     const increaseCounter = () => setCounter(c => Math.min(c + 1, 5));
@@ -40,6 +40,10 @@ const Slide = ({val}) => {
             text = '';
     }
 
+    const [color, changeColor] = useState(1);
+    const setId = () => changeColor(color = dots.id);
+
+
     const dots = [
         { title: '• ', id: 1 },
         { title: '• ', id: 2 },
@@ -54,6 +58,7 @@ const Slide = ({val}) => {
             style={{
                 color: (dots.id === counter) ? 'black' : '#bfd1f1'
             }}
+            onClick={setId}
         >
             {dots.title}
         </div>
@@ -96,8 +101,6 @@ const CurrTime = () => {
 }
 
 const Footer = () => {
-
-    
 
     return (
         <>
