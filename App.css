@@ -15,7 +15,8 @@ header {
 }
 
 button {
-  padding: 15px 10px;
+  padding: 0px 10px;
+  height: 96.5%;
   color: white;
   cursor: pointer;
   font-size: 20px;
@@ -68,9 +69,8 @@ pre {
 
 .prev, .next {
   position: absolute;
-  top: 50%;
-  margin-top: -22px;
-  background-color: rgba(15, 31, 102, 0.8);
+  /* top: 50%; */
+  /* margin-top: -22px; */
   transition: 0.3s;
 }
 
@@ -79,13 +79,15 @@ pre {
 }
 
 .prev {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px 0px 0px 5px;
   left: 0;
+  background: linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);
 }
 
 .next {
-  border-radius: 5px 0px 0px 5px;
-  right: 0; 
+  border-radius: 0px 5px 5px 0px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);
 }
 
 .dots {
@@ -93,7 +95,7 @@ pre {
   position: absolute;
   top: 75%;
   font-size: 30px;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
 }
 
 .dots > div {
@@ -116,6 +118,7 @@ pre {
   button {
     padding: 8px 5px;
     font-size: 14px;
+    height: 175px;
   }
 
   #slideshow {
