@@ -41,7 +41,7 @@ const Slide = () => {
     }
 
     const [color, changeColor] = useState(1);
-    const setId = () => changeColor(color = dots.id);
+    const setId = () => changeColor(counter => color);
 
 
     const dots = [
@@ -58,7 +58,7 @@ const Slide = () => {
             style={{
                 color: (dots.id === counter) ? 'black' : '#bfd1f1'
             }}
-            onClick={setId}
+            onClick={() => setId(dots.id)}
         >
             {dots.title}
         </div>
