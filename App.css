@@ -74,8 +74,12 @@ pre {
   transition: 0.3s;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(15, 31, 102, 1.0); 
+.prev:hover {
+  background: linear-gradient(90deg, rgba(7,15,47,1) 0%, rgba(19,40,134,1) 50%, rgba(15,31,102,0) 100%);
+}
+
+.next:hover {
+  background: linear-gradient(90deg, rgba(15,31,102,0) 0%, rgba(19,40,134,1) 50%, rgba(7,15,47,1) 100%);
 }
 
 .prev {
