@@ -19,22 +19,34 @@ const Slide = () => {
     const increaseCounter = () => setCounter(c => Math.min(c + 1, 5));
 
     let text = '';
+    let prevgradient = '';
+    let nextgradient = '';
 
     switch(counter) {
         case 1:
             text = `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`;
+            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
             break;
         case 2:
             text = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.`;
+            prevgradient = `linear-gradient(90deg, rgba(103,27,196, 0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(103,27,196, 0.8) 100%);`;
             break;
         case 3:
             text = `Contrary to popular belief, Lorem Ipsum is not simply random text.`;
+            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
             break;
         case 4:
             text = `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`;
+            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
             break;
         case 5:
             text = `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`;
+            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
             break;
         default:
             text = '';
@@ -66,8 +78,12 @@ const Slide = () => {
     return (
         <>
             <img src={`slide${counter}.png`} alt={`slide${counter}`} className="img-class"/>
-            <button className="prev" onClick={reduceCounter}>{'<'}</button>
-            <button className="next" onClick={increaseCounter}>{'>'}</button>
+            <button className="prev" style={{
+                background: {prevgradient}}
+                } onClick={reduceCounter}>{'<'}</button>
+            <button className="next" style={{
+                background: {nextgradient}}
+                } onClick={increaseCounter}>{'>'}</button>
             <div className="dots">
                 {highlightDot}
             </div>
