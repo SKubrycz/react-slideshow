@@ -3,11 +3,19 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Navbar = () => {
+    const [font, setStyle] = useState('italic');
+    const changeStyle = () => {
+        if (font === 'italic') {
+            setStyle('normal');
+        } else {
+            setStyle('italic')
+        }
+    }
 
     return (
         <>
             <nav className="navbar">
-            <header>Slideshow</header>
+            <header onClick={changeStyle} style={{fontStyle: `${font}`}}>Slideshow</header>
             </nav>
         </>
     )
