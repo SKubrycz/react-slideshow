@@ -43,18 +43,18 @@ const Slide = () => {
             break;
         case 3:
             text = `Contrary to popular belief, Lorem Ipsum is not simply random text.`;
-            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
-            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
+            prevgradient = `linear-gradient(90deg, rgba(82, 3, 72,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(82, 3, 72,0.8) 100%);`;
             break;
         case 4:
             text = `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`;
-            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
-            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
+            prevgradient = `linear-gradient(90deg, rgba(2, 50, 64,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(2, 50, 64,0.8) 100%);`;
             break;
         case 5:
             text = `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`;
-            prevgradient = `linear-gradient(90deg, rgba(15,31,102,0.8) 0%, rgba(0,0,0,0) 100%);`;
-            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(15,31,102,0.8) 100%);`;
+            prevgradient = `linear-gradient(90deg, rgba(0, 77, 48,0.8) 0%, rgba(0,0,0,0) 100%);`;
+            nextgradient = `linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0, 77, 48,0.8) 100%);`;
             break;
         default:
             text = '';
