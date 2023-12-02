@@ -1,7 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e1329;
+  background: linear-gradient(90deg, #0f1f66, #1753a6, #2ba2d9, #35e6f0);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
   color: #bfd1f1;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -36,8 +40,8 @@ pre {
 .navbar {
   margin-bottom: 50px;
   padding: 30px;
-  background-color: #01030c;
-  box-shadow: 0px 10px 40px #01030c;
+  background-color: #01030c7c;
+  box-shadow: 0px 10px 40px #01030c7c;
 }
 
 #slideshow {
@@ -112,10 +116,46 @@ pre {
   right: 0;
   bottom: 0;
   padding: 30px;
-  background-color: #01030c;
-  box-shadow: 0px -20px 40px #01030c;
+  background-color: #01030c7c;
+  box-shadow: 0px -20px 40px #01030c7c;
   font-style: italic;
   font-weight: 600;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
 }
 
 @media (max-width: 768px) {
