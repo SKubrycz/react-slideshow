@@ -72,16 +72,17 @@ const Slide = () => {
         { title: '•', id: 5 }
       ];
 
-    const highlightDot = dots.map(dots =>
+    const highlightDot = dots.map((id, title) =>
         <div
-            key={dots.id}
+            key={id}
             style={{
-                color: (dots.id === counter) ? 'black' : '#bfd1f1'
+                color: (id === counter) ? 'black' : '#bfd1f1'
             }}
-            onClick={() => setId(dots.id)}
+            onClick={() => setId(id)}
         >
-            {dots.title}
+            {title}
         </div>
+    
     );
     return (
         <>
