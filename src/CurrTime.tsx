@@ -8,7 +8,7 @@ export default function CurrTime() {
     return function cleanup() {
       clearInterval(timer);
     };
-  });
+  }, []);
 
   return (
     <>

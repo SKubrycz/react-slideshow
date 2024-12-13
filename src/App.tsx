@@ -14,9 +14,8 @@ const App = () => {
   return (
     <>
       <Navbar></Navbar>
-      <article id="slideshow">
-        <Slide />
-      </article>
+
+      <Slide />
       <Footer></Footer>
     </>
   );
