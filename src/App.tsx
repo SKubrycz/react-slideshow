@@ -14,7 +14,6 @@ const App = () => {
   return (
     <>
       <Navbar></Navbar>
-
       <Slide />
       <Footer></Footer>
     </>

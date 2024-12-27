@@ -92,7 +92,7 @@ export default function Slide() {
 
   const calculateImages = () => {
     const updatedImages = images.map((el, i) => {
-      const scale = 100 - Math.abs((el.id - counter) * 20);
+      const scale = 100 - Math.abs((el.id - counter) * 50);
       let position: Position = {
         top: 0,
         left: 0,
@@ -152,9 +152,6 @@ export default function Slide() {
       text = "";
   }
 
-  /* const [color, changeColor] = useState(1);
-      const setId = () => changeColor(); */
-
   const dots = [
     { title: "• ", id: 1 },
     { title: "• ", id: 2 },
@@ -166,8 +163,10 @@ export default function Slide() {
   const highlightDot = dots.map((dot) => (
     <div
       key={dot.id}
+      className="dot"
+      onClick={() => setCounter(dot.id)}
       style={{
-        color: dot.id === counter ? "black" : "#d9e6fc",
+        color: dot.id === counter ? "darkblue" : "#ccdfff",
       }}
     >
       {dot.title}
@@ -204,9 +203,9 @@ export default function Slide() {
       </article>
       <article id="other">
         <div>Counter: {`\n${counter}`}</div>
-        <div className="desc">
+        <div className="desc" style={{fontSize: (text.length > 200) ? "16px" : "20px"}}>
           {`slide no.${counter} desc: \n\n`}
-          {text}
+          {(text.length > 200) ? text.slice(0, 200) + "..." : text}
         </div>
       </article>
     </div>
